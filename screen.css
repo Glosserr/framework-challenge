@@ -1,4 +1,120 @@
-/* Add screen styles below */
-a.active {
-    font-weight: bold;
-}
+/* VR Games - Minimal Design System */
+
+/* Core Variables */
+:root {
+    /* Monochromatic color scheme */
+    --primary: #2A2A2A;
+    --secondary: #4A4A4A;
+    --accent: #7A7A7A;
+    --background: #FFFFFF;
+    --text: #1A1A1A;
+    
+    /* Spacing */
+    --unit: 8px;
+    --radius: 4px;
+  }
+  
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Typography */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--background);
+  }
+  
+  /* Grid System */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--unit);
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-1 * var(--unit));
+  }
+  
+  .col {
+    flex: 1;
+    padding: 0 var(--unit);
+  }
+  
+  /* Basic Components */
+  .btn {
+    display: inline-block;
+    padding: calc(var(--unit) * 1.5) calc(var(--unit) * 3);
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--secondary);
+  }
+  
+  .card {
+    padding: calc(var(--unit) * 2);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    margin-bottom: calc(var(--unit) * 2);
+  }
+  
+  .nav {
+    display: flex;
+    padding: calc(var(--unit) * 2);
+    background: var(--primary);
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: var(--unit);
+    margin-right: calc(var(--unit) * 2);
+  }
+  
+  /* Form Elements */
+  .input {
+    width: 100%;
+    padding: calc(var(--unit) * 1.5);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    margin-bottom: calc(var(--unit) * 2);
+  }
+  
+  /* Utility Classes */
+  .mt-1 { margin-top: calc(var(--unit) * 1); }
+  .mt-2 { margin-top: calc(var(--unit) * 2); }
+  .mt-3 { margin-top: calc(var(--unit) * 3); }
+  
+  .mb-1 { margin-bottom: calc(var(--unit) * 1); }
+  .mb-2 { margin-bottom: calc(var(--unit) * 2); }
+  .mb-3 { margin-bottom: calc(var(--unit) * 3); }
+  
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  
+  /* Simple Responsive Design */
+  @media (max-width: 768px) {
+    .col {
+      flex: 0 0 100%;
+    }
+    
+    .nav {
+      flex-direction: column;
+    }
+    
+    .nav-link {
+      margin-bottom: var(--unit);
+    }
+  }
